@@ -22,3 +22,8 @@ spring:
     uris: http://localhost:9200
     username: root
     password: 123456
+
+tinapi:
+  client:
+    access-key: accesskey
+    secretkey: abc

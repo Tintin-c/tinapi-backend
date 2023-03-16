@@ -2,6 +2,7 @@ package com.yupi.springbootinit.service.impl;
 
 import static com.yupi.springbootinit.constant.UserConstant.USER_LOGIN_STATE;
 
+import cn.hutool.core.util.RandomUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -40,7 +41,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     /**
      * 盐值，混淆密码
      */
-    private static final String SALT = "yupi";
+    private static final String SALT = "tintin";
 
     @Override
     public long userRegister(String userAccount, String userPassword, String checkPassword) {
@@ -72,6 +73,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             User user = new User();
             user.setUserAccount(userAccount);
             user.setUserPassword(encryptPassword);
+            String accessKey = DigestUtils.md5DigestAsHex(((SALT + userAccount).getBytes() + RandomUtil.randomNumbers(3)).getBytes());
+            String secretKey = DigestUtils.md5DigestAsHex((SALT + userAccount + RandomUtil.randomNumbers(5)).getBytes());;
+            user.setAccessKey(accessKey);
+            user.setSecretKey(secretKey);
+
             boolean saveResult = this.save(user);
             if (!saveResult) {
                 throw new BusinessException(ErrorCode.SYSTEM_ERROR, "注册失败，数据库错误");
