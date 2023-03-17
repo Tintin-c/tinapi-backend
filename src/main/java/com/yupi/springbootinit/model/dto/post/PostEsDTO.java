@@ -2,10 +2,11 @@ package com.yupi.springbootinit.model.dto.post;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
-import com.yupi.springbootinit.model.entity.Post;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+
+import com.tintin.tinapicommon.model.entity.Post;
 import lombok.Data;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;

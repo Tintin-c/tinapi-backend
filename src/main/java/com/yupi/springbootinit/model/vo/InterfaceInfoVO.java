@@ -2,7 +2,7 @@ package com.yupi.springbootinit.model.vo;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.yupi.springbootinit.model.entity.Post;
+import com.tintin.tinapicommon.model.entity.Post;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 

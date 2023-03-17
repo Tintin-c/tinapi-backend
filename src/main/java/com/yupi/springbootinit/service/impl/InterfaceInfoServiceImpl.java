@@ -2,9 +2,9 @@ package com.yupi.springbootinit.service.impl;
 import java.util.Date;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.tintin.tinapicommon.model.entity.InterfaceInfo;
 import com.yupi.springbootinit.common.ErrorCode;
 import com.yupi.springbootinit.exception.BusinessException;
-import com.yupi.springbootinit.model.entity.InterfaceInfo;
 import com.yupi.springbootinit.service.InterfaceInfoService;
 import com.yupi.springbootinit.mapper.InterfaceInfoMapper;
 import org.apache.commons.lang3.StringUtils;

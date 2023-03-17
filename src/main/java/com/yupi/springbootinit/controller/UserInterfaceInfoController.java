@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.gson.Gson;
 import com.tintin.tinapiclientsdk.client.TinapiClient;
+import com.tintin.tinapicommon.model.entity.User;
+import com.tintin.tinapicommon.model.entity.UserInterfaceInfo;
 import com.yupi.springbootinit.annotation.AuthCheck;
 import com.yupi.springbootinit.common.*;
 import com.yupi.springbootinit.constant.CommonConstant;
@@ -14,8 +16,6 @@ import com.yupi.springbootinit.model.dto.userInterfaceInfo.UserInterfaceInfoAddR
 import com.yupi.springbootinit.model.dto.userInterfaceInfo.UserInterfaceInfoEditRequest;
 import com.yupi.springbootinit.model.dto.userInterfaceInfo.UserInterfaceInfoQueryRequest;
 import com.yupi.springbootinit.model.dto.userInterfaceInfo.UserInterfaceInfoUpdateRequest;
-import com.yupi.springbootinit.model.entity.UserInterfaceInfo;
-import com.yupi.springbootinit.model.entity.User;
 import com.yupi.springbootinit.service.UserInterfaceInfoService;
 import com.yupi.springbootinit.service.UserService;
 import lombok.extern.slf4j.Slf4j;

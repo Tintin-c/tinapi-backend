@@ -1,7 +1,7 @@
 package com.yupi.springbootinit.service;
 
-import com.yupi.springbootinit.model.entity.InterfaceInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.tintin.tinapicommon.model.entity.InterfaceInfo;
 
 /**
 * @author tintin
